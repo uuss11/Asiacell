@@ -1,41 +1,518 @@
-
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>تحميل تطبيق آسياسيل</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f2f2f2;
-      direction: rtl;
-    }
-    .container {
-      margin-top: 50px;
-    }
-    img {
-      width: 150px;
-      border-radius: 20px;
-    }
-    a.button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      background-color: #e60000;
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      border-radius: 8px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" آسياسيل الرسمي - تحميل التطبيق الأصلي بأحدث إصدار">
+    <title>تحميل تطبيق آسياسيل</title>
+    <link rel="icon" href="https://example.com/asiasell-favicon.ico" type="image/x-icon">
+    <style>
+        :root {
+            --primary-color: #E31937;
+            --secondary-color: #F8F8F8;
+            --accent-color: #FFD700;
+            --text-color: #333333;
+            --light-text: #777777;
+            --white: #FFFFFF;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --border-radius: 12px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .logo {
+            height: 50px;
+            width: auto;
+        }
+        
+        .brand-name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+        
+        .main-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #C8102E 100%);
+            color: var(--white);
+            padding: 3rem 2rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(30deg);
+        }
+        
+        .hero-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            position: relative;
+        }
+        
+        .app-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 25px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            border: 3px solid var(--white);
+        }
+        
+        .app-title {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .app-developer {
+            color: var(--light-text);
+            margin-bottom: 1rem;
+        }
+        
+        .app-version {
+            background-color: var(--secondary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+        
+        .app-description {
+            text-align: center;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            line-height: 1.7;
+        }
+        
+        .download-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(227, 25, 55, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        .download-btn:hover {
+            background-color: #C8102E;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(227, 25, 55, 0.4);
+        }
+        
+        .download-size {
+            color: var(--light-text);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+        
+        .screenshots-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            color: var(--primary-color);
+        }
+        
+        .screenshots-container {
+            display: flex;
+            gap: 1rem;
+            overflow-x: auto;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+            scrollbar-width: thin;
+        }
+        
+        .screenshot {
+            height: 300px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            border: 1px solid #e0e0e0;
+            flex-shrink: 0;
+        }
+        
+        .details-section {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .detail-item {
+            margin-bottom: 1rem;
+        }
+        
+        .detail-label {
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            color: var(--light-text);
+        }
+        
+        .detail-value {
+            font-weight: 500;
+        }
+        
+        .whats-new {
+            margin-top: 1.5rem;
+        }
+        
+        .update-item {
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .update-item::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .footer {
+            background-color: var(--white);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-link {
+            text-decoration: none;
+            color: var(--light-text);
+            transition: color 0.3s;
+        }
+        
+        .footer-link:hover {
+            color: var(--primary-color);
+        }
+        
+        .copyright {
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
+        
+        .verified-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            background-color: rgba(0, 200, 83, 0.1);
+            color: #00C853;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-left: 0.5rem;
+        }
+        
+        .rating-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .stars {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+        
+        .rating-text {
+            font-weight: 600;
+        }
+        
+        .rating-count {
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            
+            .logo-container {
+                margin-bottom: 1rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .app-card {
+                padding: 1.5rem;
+            }
+            
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>تطبيق آسياسيل الرسمي</h1>
-    <img src="asiasell.png" alt="شعار آسياسيل">
-    <p>يمكنك الآن تحميل تطبيق آسياسيل الرسمي مباشرة من موقعنا.</p>
-    <a class="button" href="asiasell.apk" download>اضغط هنا لتحميل تطبيق آسياسيل</a>
-  </div>
+    <header class="header">
+        <div class="logo-container">
+            <img src="https://via.placeholder.com/50x50/E31937/FFFFFF?text=AS" alt="شعار آسياسيل" class="logo">
+            <span class="brand-name">آسياسيل</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#features" class="nav-link">المميزات</a>
+            <a href="#screenshots" class="nav-link">لقطات الشاشة</a>
+            <a href="#details" class="nav-link">تفاصيل التطبيق</a>
+            <a href="#download" class="nav-link">التنزيل</a>
+        </nav>
+    </header>
+    
+    <main class="main-container">
+        <section class="hero">
+            <h1 class="hero-title">تطبيق آسياسيل الرسمي</h1>
+            <p class="hero-subtitle">سجل الدخول الآن في رقمك، ربح 1ميجابايت أنترنيت لاول عملية تسجيل دخول </p>
+        </section>
+        
+        <section class="app-card">
+            <img src="https://via.placeholder.com/120x120/E31937/FFFFFF?text=AS" alt="أيقونة تطبيق آسياسيل" class="app-icon">
+            <h2 class="app-title">آسياسيل <span class="verified-badge">✓ موثوق</span></h2>
+            <p class="app-developer">مطور بواسطة: AsiaSell Inc.</p>
+            <span class="app-version">الإصدار 5.7.2 - محدث في 15 يونيو 2024</span>
+            
+            <div class="rating-container">
+                <div class="stars">★★★★★</div>
+                <span class="rating-text">4.8</span>
+                <span class="rating-count">(24,753 تقييم)</span>
+            </div>
+            
+            <p class="app-description">
+                تطبيق آسياسيل يوفر لك تجربة جديدة. 
+                استمتع بعروض حصرية . 
+                التطبيق الرسمي الوحيد المعتمد من شركة آسياسيل.
+            </p>
+            
+            <a href="https://example.com/download/asiasell-latest.apk" class="download-btn" download>
+                <span>تنزيل التطبيق</span>
+                <span>↓</span>
+            </a>
+            
+            <p class="download-size">حجم التطبيق: 28.4 MB</p>
+            
+            <div id="screenshots">
+                <h3 class="screenshots-title">لقطات من التطبيق</h3>
+                <div class="screenshots-container">
+                    <img src="https://via.placeholder.com/180x300/F8F8F8/777777?text=Screen+1" alt="لقطة شاشة 1" class="screenshot">
+                    <img src="https://via.placeholder.com/180x300/F8F8F8/777777?text=Screen+2" alt="لقطة شاشة 2" class="screenshot">
+                    <img src="https://via.placeholder.com/180x300/F8F8F8/777777?text=Screen+3" alt="لقطة شاشة 3" class="screenshot">
+                    <img src="https://via.placeholder.com/180x300/F8F8F8/777777?text=Screen+4" alt="لقطة شاشة 4" class="screenshot">
+                    <img src="https://via.placeholder.com/180x300/F8F8F8/777777?text=Screen+5" alt="لقطة شاشة 5" class="screenshot">
+                </div>
+            </div>
+        </section>
+        
+        <section id="features" class="details-section">
+            <h3 class="section-title">مميزات التطبيق</h3>
+            <div class="details-grid">
+                <div class="detail-item">
+                    <div class="detail-label">واجهة مستخدم محسنة</div>
+                    <div class="detail-value">تصميم حديث وسهل الاستخدام</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">دفع آمن</div>
+                    <div class="detail-value">خيارات دفع متعددة مع تشفير متقدم</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">تتبع الطلبات</div>
+                    <div class="detail-value">متابعة الطلب خطوة بخطوة</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">عروض حصرية</div>
+                    <div class="detail-value">حول رصيد واحصل على 5دولار مجانًا</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">دعم متعدد اللغات</div>
+                    <div class="detail-value">يدعم العربية والإنجليزية  </div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">خدمة العملاء</div>
+                    <div class="detail-value">دعم فني على مدار الساعة</div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="details" class="details-section">
+            <h3 class="section-title">تفاصيل التطبيق</h3>
+            <div class="details-grid">
+                <div class="detail-item">
+                    <div class="detail-label">التصنيف</div>
+                    <div class="detail-value">أمأمن بياناتdiv>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">حجم التطبيق</div>
+                    <div class="detail-value">28.4 MB</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">عدد التنزيلات</div>
+                    <div class="detail-value">+10 مليون</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">الإصدار الحالي</div>
+                    <div class="detail-value">5.7.2</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">تاريخ التحديث</div>
+                    <div class="detail-value">15 يونيو 2024</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">متطلبات النظام</div>
+                    <div class="detail-value">أندرويد 8.0 أو أحدث</div>
+                </div>
+            </div>
+            
+            <div class="whats-new">
+                <h3 class="section-title">ما الجديد في هذا الإصدار</h3>
+                <div class="update-item">تحسينات كبيرة في سرعة التطبيق وأدائه</div>
+                <div class="update-item">وظيفة البحث الذكي مع اقتراحات محسنة</div>
+                <div class="update-item">إضافة خيار الدفع بواسطة العملات الرقمية</div>
+                <div class="update-item">تصحيح بعض الأخطاء وتحسين الاستقرار</div>
+                <div class="update-item">واجهة مستخدم جديدة لقسم العروض والتخفيضات</div>
+            </div>
+        </section>
+        
+        <section id="download" class="details-section" style="text-align: center;">
+            <h3 class="section-title">تنزيل تطبيق آسياسيل</h3>
+            <p style="margin-bottom: 2rem;">اضغط على الزر أدناه لتنزيل التطبيق الرسمي لآسياسيل</p>
+            <a href="https://example.com/download/asiasell-latest.apk" class="download-btn" download>
+                <span>تنزيل الآن</span>
+                <span>↓</span>
+            </a>
+            <p style="color: var(--light-text); margin-top: 1rem;">الإصدار 5.7.2 - 28.4 MB</p>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#" class="footer-link">سياسة الخصوصية</a>
+            <a href="#" class="footer-link">شروط الاستخدام</a>
+            <a href="#" class="footer-link">اتصل بنا</a>
+            <a href="#" class="footer-link">الأسئلة الشائعة</a>
+        </div>
+        <p class="copyright">© 2024 آسياسيل. جميع الحقوق محفوظة.</p>
+    </footer>
 </body>
-</html>
+                  </html>
